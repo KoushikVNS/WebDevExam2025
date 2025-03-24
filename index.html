@@ -173,14 +173,16 @@
         }
         
         footer {
-            background-color: #24292d;
-            color: #fff;
+            background-color: #fff;
+            color: #6c757d;
             padding: 50px 0 20px;
+            border-top: 1px solid #e0e0e0;
         }
         
         footer h5 {
             font-weight: 600;
             margin-bottom: 20px;
+            color: #24292d;
         }
         
         footer ul {
@@ -193,13 +195,13 @@
         }
         
         footer ul li a {
-            color: #adb5bd;
+            color: #6c757d;
             text-decoration: none;
             transition: color 0.3s;
         }
         
         footer ul li a:hover {
-            color: #fff;
+            color: var(--primary-color);
         }
         
         .social-icons a {
@@ -209,14 +211,36 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background-color: rgba(255,255,255,0.1);
-            color: #fff;
+            background-color: #f5f7f9;
+            color: #6c757d;
             margin-right: 10px;
             transition: background-color 0.3s;
         }
         
         .social-icons a:hover {
             background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo span {
+            color: #f46f22;
+        }
+        
+        .footer-divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0 20px;
+        }
+        
+        .app-download img {
+            height: 40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
         }
         
         /* Portrait mode styles */
@@ -621,13 +645,11 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <a class="d-inline-block mb-3" href="#">
-                        <h3 class="text-white mb-0 d-flex align-items-center">
-                            <i class="bi bi-circle-fill text-primary me-2"></i>Eduport
-                        </h3>
-                    </a>
-                    <p class="text-muted">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
-                    <div class="social-icons mt-3">
+                    <div class="footer-logo">
+                        <i class="bi bi-circle-fill text-primary"></i><span>E</span>duport
+                    </div>
+                    <p class="mb-4">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                    <div class="social-icons">
                         <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-instagram"></i></a>
                         <a href="#"><i class="bi bi-twitter"></i></a>
@@ -642,6 +664,7 @@
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">News and Blogs</a></li>
                         <li><a href="#">Library</a></li>
+                        <li><a href="#">Career</a></li>
                     </ul>
                 </div>
 
@@ -665,12 +688,39 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <!-- Placeholder for spacing -->
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <!-- Placeholder for spacing -->
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <!-- Placeholder for spacing -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact</h5>
+                    <ul class="mb-3">
+                        <li>Toll free: <span class="fw-bold">+1234 568 963</span></li>
+                        <li class="text-muted small">(9:AM to 8:PM IST)</li>
+                        <li class="mt-2">Email: <a href="mailto:example@gmail.com">example@gmail.com</a></li>
+                    </ul>
+                    <div class="app-download">
+                        <a href="#"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="40"></a>
+                        <a href="#"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" height="40"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-0 text-muted">© 2023 Eduport. All rights reserved.</p>
+                    <p class="mb-0 text-muted">Copyrights ©2024 Eduport. Build by Webestica</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-globe me-1"></i> Language</a>
                         <a href="#" class="text-muted me-3">Terms of use</a>
                         <a href="#" class="text-muted">Privacy policy</a>
                     </div>
