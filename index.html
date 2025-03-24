@@ -204,6 +204,11 @@
             color: var(--primary-color);
         }
         
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+        
         .social-icons a {
             display: inline-flex;
             align-items: center;
@@ -223,9 +228,16 @@
         }
         
         .footer-logo {
-            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 15px;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
         }
         
         .footer-logo span {
@@ -241,6 +253,29 @@
             height: 40px;
             margin-right: 10px;
             margin-bottom: 10px;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+        }
+        
+        .footer-bottom-links {
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-bottom-links a {
+            color: #6c757d;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-links a:hover {
+            color: var(--primary-color);
         }
         
         /* Portrait mode styles */
@@ -275,6 +310,20 @@
             footer {
                 margin-top: 30px;
             }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            .footer-bottom-links a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -284,7 +333,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white py-3">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <i class="bi bi-circle-fill text-primary"></i>Eduport
+                    <img src="https://github.com/KoushikVNS/WebDevExam2025/blob/main/eduport.png?raw=true" alt="Eduport Logo" height="40">
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -324,7 +373,7 @@
                             <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"></i>
                         </div>
                         <div class="ms-2">
-                            <img src="https://github.com/KoushikVNS/WebDevExam2025/blob/main/profile.png?raw=true" alt="Profile Image">
+                            <img src="https://github.com/KoushikVNS/WebDevExam2025/blob/main/profile.png?raw=true" class="rounded-circle" alt="User profile">
                         </div>
                     </div>
                 </div>
@@ -641,14 +690,14 @@
     </main>
 
     <!-- Footer Section -->
-    <footer>
+    <footer class="pt-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
+            <div class="row">
+                <div class="col-lg-3">
                     <div class="footer-logo">
-                        <i class="bi bi-circle-fill text-primary"></i><span>E</span>duport
+                        <img src="https://github.com/KoushikVNS/WebDevExam2025/blob/main/eduport.png?raw=true" alt="Eduport Logo">
                     </div>
-                    <p class="mb-4">Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
+                    <p>Eduport education theme, built specifically for the education centers which is dedicated to teaching and involve learners.</p>
                     <div class="social-icons">
                         <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-instagram"></i></a>
@@ -657,73 +706,64 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <h5>Company</h5>
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">News and Blogs</a></li>
-                        <li><a href="#">Library</a></li>
-                        <li><a href="#">Career</a></li>
-                    </ul>
-                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Company</h5>
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">News and Blogs</a></li>
+                                <li><a href="#">Library</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+                        </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <h5>Community</h5>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
-                </div>
+                        <div class="col-md-3">
+                            <h5>Community</h5>
+                            <ul>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <h5>Teaching</h5>
-                    <ul>
-                        <li><a href="#">Become a teacher</a></li>
-                        <li><a href="#">How to guide</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
+                        <div class="col-md-3">
+                            <h5>Teaching</h5>
+                            <ul>
+                                <li><a href="#">Become a teacher</a></li>
+                                <li><a href="#">How to guide</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
 
-            <div class="row mt-4">
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <!-- Placeholder for spacing -->
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <!-- Placeholder for spacing -->
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <!-- Placeholder for spacing -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5>Contact</h5>
-                    <ul class="mb-3">
-                        <li>Toll free: <span class="fw-bold">+1234 568 963</span></li>
-                        <li class="text-muted small">(9:AM to 8:PM IST)</li>
-                        <li class="mt-2">Email: <a href="mailto:example@gmail.com">example@gmail.com</a></li>
-                    </ul>
-                    <div class="app-download">
-                        <a href="#"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="40"></a>
-                        <a href="#"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" height="40"></a>
+                        <div class="col-md-3">
+                            <h5>Contact</h5>
+                            <ul class="mb-3">
+                                <li>Toll free: <span class="fw-bold">+1234 568 963</span></li>
+                                <li class="text-muted small">(9:AM to 8:PM IST)</li>
+                                <li class="mt-2">Email: <a href="mailto:example@gmail.com">example@gmail.com</a></li>
+                            </ul>
+                            <div class="app-download">
+                                <a href="#"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="40"></a>
+                                <a href="#"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" height="40"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="footer-divider"></div>
 
-            <div class="row">
-                <div class="col-md-6">
+            <div class="footer-bottom">
+                <div>
                     <p class="mb-0 text-muted">Copyrights ©2024 Eduport. Build by Webestica</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="d-flex justify-content-md-end">
-                        <a href="#" class="text-muted me-3"><i class="bi bi-globe me-1"></i> Language</a>
-                        <a href="#" class="text-muted me-3">Terms of use</a>
-                        <a href="#" class="text-muted">Privacy policy</a>
-                    </div>
+                <div class="footer-bottom-links">
+                    <a href="#" class="text-muted"><i class="bi bi-globe me-1"></i> Language</a>
+                    <a href="#" class="text-muted">Terms of use</a>
+                    <a href="#" class="text-muted">Privacy policy</a>
                 </div>
             </div>
         </div>
@@ -744,3 +784,4 @@
     </script>
 </body>
 </html>
+
